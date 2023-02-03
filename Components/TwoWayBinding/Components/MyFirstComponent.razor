@@ -1,0 +1,39 @@
+﻿<div>
+	CurrentCounterValue in MyFirstComponent is @CurrentCounterValue
+</div>
+<div>
+	CurrentCounterValue2 in MyFirstComponent is @CurrentCounterValue2
+</div>
+
+
+<button class="btn btn-secondary" @onclick=UpdateCurrentCounterValue>Update</button>
+
+@code {
+
+	[Parameter]
+	public int CurrentCounterValue { get; set; }
+
+	[Parameter]
+	public int CurrentCounterValue2 { get; set; }
+
+
+	[Parameter]
+	public EventCallback<int> CurrentCounterValueChanged { get; set; }
+
+	[Parameter]
+	public Action<int> OnMultipleOf2Action { get; set; }
+
+
+	async Task UpdateCurrentCounterValue()
+	{
+		CurrentCounterValue++;
+		await CurrentCounterValueChanged.InvokeAsync(CurrentCounterValue);
+
+		if (CurrentCounterValue % 2 == 0)
+		{
+			CurrentCounterValue2++;
+			OnMultipleOf2Action.Invoke(CurrentCounterValue2);
+
+		}
+	}
+}

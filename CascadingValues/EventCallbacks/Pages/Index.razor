@@ -1,0 +1,25 @@
+﻿@page "/"
+
+<ul>
+	<li>Last multiple of two = @LastMultipleOfTwo (no automatic UI updates)</li>
+	<li>Last multiple of four = @LastMultipleOfThree (updates UI automatically)</li>
+</ul>
+
+
+<Counter OnMultipleOfThree=@UpdateLastMultipleOfThreeValue OnMultipleOfTwoAction=@UpdateLastMultipleOfTwoValue />
+
+@code
+{
+	int LastMultipleOfTwo = 0;
+	int LastMultipleOfThree = 0;
+
+	private void UpdateLastMultipleOfTwoValue(int value)
+	{
+		LastMultipleOfTwo = value;
+	}
+
+	private void UpdateLastMultipleOfThreeValue(int value)
+	{
+		LastMultipleOfThree = value;
+	}
+}

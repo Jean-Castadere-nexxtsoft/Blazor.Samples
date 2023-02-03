@@ -1,0 +1,23 @@
+﻿@page "/purchase-order/create/{OrderNumber:int}"
+
+<h1>Create a purchase order</h1>
+<p>
+	Order number:
+	@if (!OrderNumber.HasValue)
+	{
+		@:None
+	}
+	else
+	{
+		@OrderNumber
+	}
+
+	This is the page where the user would create a new purchase order.
+</p>
+
+
+
+@code {
+	[Parameter]
+	public int? OrderNumber { get; set; }
+}

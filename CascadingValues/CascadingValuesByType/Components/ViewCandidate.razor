@@ -1,0 +1,16 @@
+﻿<hr />
+<h5>Candidate</h5>
+<div class="row" style="background-color:aqua">
+	<div class="col-12">@(UserPreferences.ViewAnonymizedData ? "[Anonymous view]" : @Candidate.Name)</div>
+	<div class="col-12">
+		<ViewAddress Address=@Candidate.Address IsPersonal=@true />
+	</div>
+</div>
+@code
+{
+	[CascadingParameter]
+	private UserPreferences UserPreferences { get; set; }
+
+	[Parameter]
+	public Candidate Candidate { get; set; }
+}

@@ -1,0 +1,18 @@
+﻿@page "/counter"
+
+<h1>Counter</h1>
+
+<p>The counter value is @currentCount</p>
+
+<button class="btn btn-primary" @onclick=IncrementCount>Increment counter</button>
+
+<MyFirstComponent/>
+
+@code {
+    int currentCount = 0;
+
+    void IncrementCount()
+    {
+        currentCount++;
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tNQrL8ZgLBfQaed1rJvd4TYup0b9urNJO8238loDnojjm0bRJQd2lfbgxWHfjr+lSyWdxnGZeLlAg5FK/h8tgw==",
+  "success": true,
+  "projectFilePath": "D:\\Project-Sample\\blazor-university-master\\src\\TemplatedComponents\\PassingPlaceholdersToRenderFragments\\PassingPlaceholdersToRenderFragments.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\CASTADERER-LENOVO\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
+  "logs": []
+}

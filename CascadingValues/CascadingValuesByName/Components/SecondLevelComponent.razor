@@ -1,0 +1,14 @@
+﻿<h3>SecondLevelComponent</h3>
+<div>
+			SecondOption = @SecondOption
+</div>
+
+<ul>
+	<li><ThirdLevelComponent /></li>
+</ul>
+
+@code {
+
+	[CascadingParameter(Name = "SecondOption")]
+	private bool SecondOption { get; set; }
+}
